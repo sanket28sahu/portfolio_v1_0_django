@@ -1,0 +1,33 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+{%  load static %}
+
+    {% include "portfolio/navbar.html" %}
+
+    {% include "portfolio/profile.html" %}
+
+    {% include "portfolio/about.html" %}
+
+    {% include "portfolio/timeline.html" %}
+
+    {% include "portfolio/skills.html" %}
+
+    {% include "portfolio/why_hire.html" %}
+
+    {% include "portfolio/separator_1.html" %}
+
+    {% include "portfolio/work.html" %}
+
+    {% include "portfolio/separator_2.html" %}
+
+    {% include "portfolio/contact.html" %}
+
+    {% block footer %}
+
+        {%  include "portfolio/footer_content.html" %}
+
+    {% endblock footer %}
+
+
+
+{% endblock content %}
