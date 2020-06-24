@@ -14,18 +14,13 @@
         <div class="media-container-row">
             <div class="col-md-3">
                 <div class="media-wrap">
-                    <!--<a href="https://mobirise.co/">
-                       <img src="assets/images/logo2.png" alt="Sanket Sahu">
-                    </a>-->
+
                 </div>
             </div>
             <div class="col-md-9">
                 <p class="mbr-text align-right links mbr-fonts-style display-7">
-                    <a href="home.html#content4-14" class="text-white">ABOUT ME</a>&nbsp; &nbsp; &nbsp;&nbsp;
-                    <a href="home.html#content4-15" class="text-white">SKILLS</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="home.html#counters6-q" class="text-white">WHY HIRE ME?</a>&nbsp; &nbsp; &nbsp;&nbsp;
-                    <a href="home.html#features15-12" class="text-white">MY WORK</a>&nbsp; &nbsp; &nbsp;
-                    <a href="home.html#content8-y" class="text-white">CV</a></p>
+                    <a href="index.html#content4-14" class="text-white">ABOUT ME</a>&nbsp; &nbsp; &nbsp;&nbsp;<a href="index.html#content4-15" class="text-white">SKILLS</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="index.html#counters6-q" class="text-white">WHY HIRE ME?</a>&nbsp; &nbsp; &nbsp;&nbsp;<a href="index.html#features15-12" class="text-white">MY WORK</a>&nbsp; &nbsp; &nbsp; <a href="index.html#content8-y" class="text-white">CV</a></p>
             </div>
         </div>
         <div class="footer-lower">
@@ -38,30 +33,31 @@
                 <div class="col-md-6 copyright">
                     <p class="mbr-text mbr-fonts-style display-7"><a href="index.html#features12-t" class="text-white">SANKET SAHU &nbsp; [ WEB DEVELOPER / BUSINESS ANALYSIS ]</a></p>
                 </div>
+
                 <div class="col-md-6">
                     <div class="social-list align-right">
-                        <div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
+                        <!--<div class="soc-item">
+                            <a href="https://www.facebook.com/shanky2892/" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                             </a>
-                        </div>
+                        </div>-->
                         <div class="soc-item">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <a href="{{ details_singledata.linkedin_link }}" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                             </a>
                         </div>
-                        <div class="soc-item">
-                            <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                        <!--<div class="soc-item">
+                            <a href="https://www.instagram.com/28sanketsahu" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                             </a>
-                        </div>
+                        </div>-->
                         <div class="soc-item">
-                            <a href="mailto:sanket28sahu@gmail.com">
+                            <a href="mailto:{{ details_singledata.email_data }}">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="tel:+1-226-898-3050">
+                            <a href="tel:{{ details_singledata.phoneno_data }}">
                                 <span class="mbr-iconfont mbr-iconfont-social mbri-mobile2" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                             </a>
                         </div>
@@ -76,6 +72,8 @@
         </div>
     </div>
 </section>
+
+
 
 
   <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %}"></script>

@@ -1,111 +1,76 @@
 <section class="timeline2 cid-rNlTCqKmFs" id="timeline2-4">
 
 
+
+
+
     <div class="container align-center">
         <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">Educational and Work Timeline
         </h2>
         <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">Total work experience: 4 years</h3>
 
         <div class="container timelines-container" mbri-timelines="">
-            <!--1-->
+            <!--showing left-->
+            {% for timelineedudata in timeline_edu_data %}
+            {% if  timelineedudata.completion_yr == '2020' %}
+            <div class="row timeline-element  separline">
+                <span class="iconsBackground">
+                    <span class="mbr-iconfont mbri-bookmark"></span>
+                </span>
+                <div class="col-xs-12 col-md-6 align-left ">
+                    <div class="timeline-text-content">
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">{{ timelineedudata.course_name }}</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>{{ timelineedudata.completion_yr }}&nbsp;<br>{{ timelineedudata.job_type }}</strong><br><br>{{ timelineedudata.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% endfor %}
+
+            <!--Showing right-->
+            {% for timelineworkdata in timeline_work_data %}
             <div class="row timeline-element reverse separline">
                 <span class="iconsBackground">
                     <span class="mbr-iconfont mbri-bookmark"></span>
                 </span>
                 <div class="col-xs-12 col-md-6 align-left">
                     <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Diploma in Computer Technology</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>2011<br>Full Time</strong><br><br>I have learned various concepts relating to the computer architecture and its working which have helped me building strong skills in computer development in range from software to hardware. I have learned various software skills along with communication skills.
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">{{ timelineworkdata.designation }} @ {{ timelineworkdata.company_name }}</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7">
+                            <strong>{% if timelineworkdata.start_date == timelineworkdata.end_date %}
+                            {{ timelineworkdata.end_date }}
+                                {% else %}
+                            {{ timelineworkdata.start_date }} - {{ timelineworkdata.end_date }}
+                                {% endif %}<br>{{ timelineworkdata.job_type }}
+                            </strong><br><br>
+                            {{ timelineworkdata.Description }}
                         </p>
                      </div>
                 </div>
             </div>
-            <!--2-->
+            {% endfor %}
+
+            <!--showing left-->
+            {% for timelineedudata in timeline_edu_data %}
+            {% if  timelineedudata.completion_yr < '2015' %}
             <div class="row timeline-element  separline">
                 <span class="iconsBackground">
                     <span class="mbr-iconfont mbri-bookmark"></span>
                 </span>
                 <div class="col-xs-12 col-md-6 align-left ">
                     <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Bachelor's Degree in Computer Science and Engineering</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>2014&nbsp;<br>Full Time</strong><br><br>I got knowledge in area of electrical engineering and software engineering concepts. I got hands on skills with various phases of software development such as software requirements specification, software testing, planning and designing. I can say, I got the ability about taking complex problem and finding a solution by the application from the fields of math, science and computational theory.
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">{{ timelineedudata.course_name }}</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>{{ timelineedudata.completion_yr }}&nbsp;<br>{{ timelineedudata.job_type }}</strong><br><br>{{ timelineedudata.description }}
                         </p>
                     </div>
                 </div>
             </div>
-            <!--3-->
-            <div class="row timeline-element reverse separline">
-                <span class="iconsBackground">
-                    <span class="mbr-iconfont mbri-laptop"></span>
-                </span>
-                <div class="col-xs-12 col-md-6 align-left">
-                    <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Web Designer @ Gyankatta.org</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>2014 - 2017<br>Full Time</strong><br><br>I have started my career as web developer where I got practical real-life experience which allows me on to apply my software skills for development of web application.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--4-->
-            <div class="row timeline-element  separline">
-                <span class="iconsBackground">
-                    <span class="mbr-iconfont mbri-laptop"></span>
-                </span>
-                <div class="col-xs-12 col-md-6 align-left ">
-                    <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Web Developer <br>@ Iuris Technology and Services</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>2018&nbsp;<br>Full Time</strong><br><br>I worked as web Designer where I applied my designing skills along with development of web application.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--5-->
-            <div class="row timeline-element reverse separline">
-                <span class="iconsBackground">
-                    <span class="mbr-iconfont mbri-laptop"></span>
-                </span>
-                <div class="col-xs-12 col-md-6 align-left">
-                    <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Senior UI Developer <br>@ Persistent Systems Pvt. Ltd.</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>2018&nbsp;<br>Part - Time</strong><br><br>I got an opportunity to interact with clients and get myself involve in building software and formulate according to clients needs. It has helped me in improving my communication skills along with software development.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--6-->
-            <div class="row timeline-element separline">
-                <span class="iconsBackground">
-                    <span class="mbr-iconfont mbri-bookmark"></span>
-                </span>
-                <div class="col-xs-12 col-md-6 align-left ">
-                    <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Graduate Certificate in <br>IT Business Analysis</h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>Completing in April 2020&nbsp;<br>Full Time</strong><br><br>I got opportunity to brush up my IT project analysis skills and got to know about various tools important for gathering information and formulate project on the basis of client needs and make a plan which in turn improve my communication skills which is going to make me a dynamic person and develop me professionally.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--7-->
-            <div class="row timeline-element reverse">
-                <span class="iconsBackground">
-                    <span class="mbr-iconfont mbri-laptop"></span>
-                </span>
-                <div class="col-xs-12 col-md-6 align-left">
-                    <div class="timeline-text-content">
-                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Customer Service Representative @ Pioneer Energy<br></h4>
-                        <p class="mbr-timeline-text mbr-fonts-style display-7"><strong>March 2019 - Current</strong><br><strong>Part - Time<br></strong><br>With this job I have learned how to manage college work and various daily needs to manage. At this job I got an opportunity to interact with customers and serve them with their needs.<br></p>
-                    </div>
-                </div>
-            </div>
-            <!--8-->
 
-            <!--9-->
+            {% endif %}
+            {% endfor %}
 
-            <!--10-->
-
-            <!--11-->
-
-            <!--12-->
 
         </div>
     </div>

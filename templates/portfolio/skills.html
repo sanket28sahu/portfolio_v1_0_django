@@ -73,211 +73,29 @@
         <h3 class="mbr-section-subtitle mbr-fonts-style display-5">Following are the Highlights of my skills that I will bring along with me which is not limited and ready to learn new skills</h3>
 
         <div class="row pt-5 mt-5">
+            {% for skillsdata in skills_data %}
+
             <div class="progress_elements col-md-4">
+
                 <div class="progress1 pb-5">
                     <div class="title-wrap">
                         <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>PHP</p>
+                            <p>{{ skillsdata.skill_name }}</p>
                         </div>
                         <div class="progress_value mbr-fonts-style display-7">
-                            <div class="progressbar-number">
-                            </div>
-                            <span>%</span>
+                            <!--<div class="progressbar-number">
+                            </div>-->
+                            <span>{{ skillsdata.skill_per_level }} %</span>
                         </div>
                     </div>
-                    <progress class="progress progress-primary " max="100" value="86">
+                    <progress class="progress progress-primary " max="100" value="{{ skillsdata.skill_per_level }}">
                     </progress>
                 </div>
-
-                <div class="progress2 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>
-                                MySQL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="82">
-                    </progress>
-                </div>
-
-                <div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>Python</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="63">
-                    </progress>
-                </div>
-
-				<div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>Bootstrap</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="83">
-                    </progress>
-                </div>
-
-
 
             </div>
-			<!--<div class="col-md-6 text-elements">
-                <h4 class="section-content-title pb-3 align-left mbr-fonts-style display-5">
-                    A modular approach
-                </h4>
-                <p class="section-content-text align-left mbr-fonts-style display-7">
-                    Make your own website in a few clicks! Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and mobile friendly websites in a few clicks. Mobirise is one of the easiest website development tools available today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-                </p>
-            </div>-->
-            <div class="progress_elements col-md-4">
-                <div class="progress1 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>HTML</p>
-                        </div>
-                        <div class="progress_value mbr-fonts-style display-7">
-                            <div class="progressbar-number">
-                            </div>
-                            <span>%</span>
-                        </div>
-                    </div>
-                    <progress class="progress progress-primary " max="100" value="89">
-                    </progress>
-                </div>
+            {% endfor %}
 
-                <div class="progress2 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>
-                                CSS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="85">
-                    </progress>
-                </div>
-
-                <div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>JavaScript</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="75">
-                    </progress>
-                </div>
-
-				<div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>MSSQL Server</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="92">
-                    </progress>
-                </div>
-
-
-
-            </div>
-
-			<div class="progress_elements col-md-4">
-                <div class="progress1 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>Codeignighter</p>
-                        </div>
-                        <div class="progress_value mbr-fonts-style display-7">
-                            <div class="progressbar-number">
-                            </div>
-                            <span>%</span>
-                        </div>
-                    </div>
-                    <progress class="progress progress-primary " max="100" value="85">
-                    </progress>
-                </div>
-
-                <div class="progress2 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>
-                                Netbeans &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="78">
-                    </progress>
-                </div>
-
-                <div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>Pycharm</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="85">
-                    </progress>
-                </div>
-
-				<div class="progress3 pb-5">
-                    <div class="title-wrap">
-                        <div class="progressbar-title mbr-fonts-style display-7">
-                            <p>Opencart</p>
-                        </div>
-                    <div class="progress_value mbr-fonts-style display-7">
-                        <div class="progressbar-number">
-                        </div>
-                        <span>%</span>
-                    </div>
-                    </div>
-                    <progress class="progress progress-primary" max="100" value="70">
-                    </progress>
-                </div>
-
-
-
-
-            </div>
         </div>
+
     </div>
 </section>

@@ -67,20 +67,27 @@
     </div>
 </section>
 
+
+{%  for persondata in person_data %}
+    {% if  persondata.id == 1 %}
+
 <section class="mbr-section content4 cid-rNriqx22Gn" id="content4-11">
-
-
 
     <div class="container">
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
-                <h2 class="align-center pb-3 mbr-fonts-style display-2">I am SANKET SAHU</h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">WEB DEVELOPER / BUSINESS ANALYST</h3>
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">I am
+                 <span style="text-transform: uppercase">{{ persondata.firstname }} {{ persondata.lastname }}</span>
+                </h2>
 
+                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">{{ details_singledata.profile_title }}</h3>
             </div>
         </div>
     </div>
+
 </section>
+
+
 
 <section class="mbr-section content8 cid-rNr8VfNZTj" id="content8-y">
 
@@ -90,7 +97,9 @@
         <div class="media-container-row title">
             <div class="col-12 col-md-8">
                 <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="">Hire Me</a>
-                    <a class="btn btn-primary display-4" href="{% static 'assets/resume/resume_sahu_developer.pdf' %}">Download CV</a></div>
+                    <a class="btn btn-primary display-4" href="{% static 'assets/resume/resume_sahu_developer.pdf' %}">Download CV</a>
+
+                </div>
             </div>
         </div>
     </div>
@@ -108,29 +117,31 @@
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
 
-
-
-
-
-
+<!--
                 <div class="soc-item">
                         <a href="https://twitter.com/mobirise" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                    </div>
+!-->
+                    <div class="soc-item">
+                        <a href="{{ details_singledata.linkedin_link }}" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
                         </a>
-                    </div><div class="soc-item">
+                    </div>
+                    <!--
+                    <div class="soc-item">
                         <a href="https://www.youtube.com/c/mobirise" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="mailto:sanket28sahu@gmail.com">
+                    </div>
+                    !-->
+                    <div class="soc-item">
+                        <a href="mailto:{{ details_singledata.email_data }}">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                         </a>
                     </div><div class="soc-item">
-                        <a href="tel:+1-226-898-3050">
+                        <a href="tel:{{ details_singledata.phoneno_data }}">
                             <span class="mbr-iconfont mbr-iconfont-social mbrib-contact-form"></span>
                         </a>
                     </div><div class="soc-item">
@@ -145,3 +156,7 @@
         </div>
     </div>
 </section>
+
+{% endif %}
+{% endfor %}
+
